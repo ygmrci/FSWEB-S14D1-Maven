@@ -1,10 +1,10 @@
 package com.workintech.pool;
 
 public class Rectangle {
-    private int width;
-    private int length;
+    private double width;
+    private double length;
 
-    public Rectangle(int width, int length) {
+    public Rectangle(double width, double length) {
         if (width < 0) {
             this.width = 0;
         } else {

@@ -1,10 +1,10 @@
 package com.workintech.pool;
 
 public class Cuboid extends Rectangle{
-    private  int height;
+    private  double height;
 
 
-    public Cuboid(int width, int length, int height){
+    public Cuboid(double width, double length, double height){
         super(width, length);
         if(height < 0){
             this.height = 0;

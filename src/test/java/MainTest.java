@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 import com.workintech.cylinder.Circle;
 import com.workintech.cylinder.Cylinder;
 import com.workintech.developers.*;
@@ -33,8 +35,8 @@ public class MainTest {
     @BeforeEach
     void setUp() {
         circle = new Circle(2);
-        cylinder = new Cylinder(2,2);
-        rectangle = new Rectangle(1,2);
+        cylinder = new Cylinder(2, 2);
+        rectangle = new Rectangle(1, 2);
         cuboid = new Cuboid(1, 2, 3);
         employee = new Employee(1, "Jane Doe", 20000);
         hrManager = new HRManager(1, "John Doe", 120000);
@@ -101,7 +103,7 @@ public class MainTest {
     @DisplayName("getArea methodu Rectangle sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetAreaRectangle() throws NoSuchFieldException {
-        assertEquals(String.format("%.2f", rectangle.getArea()), "2.00");
+        assertEquals(String.format(Locale.US,"%.2f", rectangle.getArea()), "2.00");
     }
 
     @DisplayName("Cuboid sınıf değişkenleri doğru access modifier a sahip mi ?")
@@ -121,7 +123,7 @@ public class MainTest {
     @DisplayName("getVolume methodu Cuboid sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetVolumeRectangle() throws NoSuchFieldException {
-        assertEquals(String.format("%.2f", cuboid.getVolume()), "6.00");
+        assertEquals(String.format(Locale.US,"%.2f", cuboid.getVolume()), "6.00");
     }
 
     @DisplayName("Employee sınıf değişkenleri doğru access modifier a sahip mi ?")
@@ -151,7 +153,6 @@ public class MainTest {
         assertThat(midDeveloper, instanceOf(Employee.class));
         assertThat(seniorDeveloper, instanceOf(Employee.class));
     }
-
 
 
 }
